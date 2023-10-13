@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/RegularPiece.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/CornerPiece.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/PNG/Double (128px)/tile.png" type="Texture" id=3]
+
+[node name="Pumpkin Carver" type="Node2D" groups=["Main Scene"]]
+
+[node name="Background" type="Node2D" parent="."]
+rotation = -3.14009
+
+[node name="Tile" type="Sprite" parent="Background"]
+position = Vector2( -545.868, -303.259 )
+scale = Vector2( 8.52769, 4.69806 )
+texture = ExtResource( 3 )
+
+[node name="TopWall" type="Node2D" parent="."]
+
+[node name="CornerPiece" parent="TopWall" instance=ExtResource( 2 )]
+
+[node name="RegularPiece" parent="TopWall" instance=ExtResource( 1 )]
+
+[node name="RegularPiece2" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 120, 0 )
+
+[node name="RegularPiece3" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+
+[node name="RegularPiece4" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 360, 0 )
+
+[node name="RegularPiece5" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 480, 0 )
+
+[node name="RegularPiece6" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 600, 0 )
+
+[node name="RegularPiece7" parent="TopWall" instance=ExtResource( 1 )]
+position = Vector2( 720, 0 )
+
+[node name="CornerPiece2" parent="TopWall" instance=ExtResource( 2 )]
+position = Vector2( 1088, -7.62939e-06 )
+rotation = 1.58
+
+[node name="BottomWall" type="Node2D" parent="."]
+position = Vector2( 1088, 608 )
+rotation = -3.13818
+
+[node name="CornerPiece" parent="BottomWall" instance=ExtResource( 2 )]
+
+[node name="RegularPiece" parent="BottomWall" instance=ExtResource( 1 )]
+
+[node name="RegularPiece2" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 120, 0 )
+
+[node name="RegularPiece3" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+
+[node name="RegularPiece4" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 360, 0 )
+
+[node name="RegularPiece5" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 480, 0 )
+
+[node name="RegularPiece6" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 600, 0 )
+
+[node name="RegularPiece7" parent="BottomWall" instance=ExtResource( 1 )]
+position = Vector2( 720, 0 )
+
+[node name="CornerPiece2" parent="BottomWall" instance=ExtResource( 2 )]
+position = Vector2( 1088, -7.62939e-06 )
+rotation = 1.58
+
+[node name="LeftWall" type="Node2D" parent="."]
+
+[node name="RegularPiece" parent="LeftWall" instance=ExtResource( 1 )]
+position = Vector2( 5.66244e-07, 368 )
+rotation = -1.57207
+
+[node name="RegularPiece2" parent="LeftWall" instance=ExtResource( 1 )]
+position = Vector2( -1.13687e-13, 488 )
+rotation = -1.57207
+
+[node name="RegularPiece3" parent="LeftWall" instance=ExtResource( 1 )]
+position = Vector2( -1.13687e-13, 608 )
+rotation = -1.57207
+
+[node name="RightWall" type="Node2D" parent="."]
+position = Vector2( 1088, 608 )
+rotation = 3.14309
+
+[node name="RegularPiece" parent="RightWall" instance=ExtResource( 1 )]
+position = Vector2( 5.66244e-07, 368 )
+rotation = -1.57207
+
+[node name="RegularPiece2" parent="RightWall" instance=ExtResource( 1 )]
+position = Vector2( -1.13687e-13, 488 )
+rotation = -1.57207
+
+[node name="RegularPiece3" parent="RightWall" instance=ExtResource( 1 )]
+position = Vector2( -1.13687e-13, 608 )
+rotation = -1.57207
