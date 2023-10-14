@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/RegularPiece.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/CornerPiece.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/PNG/Double (128px)/tile.png" type="Texture" id=3]
+[ext_resource path="res://scripts/GameTimer.gd" type="Script" id=4]
 
 [node name="Pumpkin Carver" type="Node2D" groups=["Main Scene"]]
+
+[node name="GameTimer" type="Timer" parent="."]
+autostart = true
+script = ExtResource( 4 )
 
 [node name="Background" type="Node2D" parent="."]
 rotation = -3.14009
@@ -101,3 +106,5 @@ rotation = -1.57207
 [node name="RegularPiece3" parent="RightWall" instance=ExtResource( 1 )]
 position = Vector2( -1.13687e-13, 608 )
 rotation = -1.57207
+
+[connection signal="timeout" from="GameTimer" to="GameTimer" method="_on_GameTimer_timeout"]
