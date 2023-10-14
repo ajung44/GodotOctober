@@ -26,7 +26,16 @@ func sliceFruit() -> void:
 	fruit.transform = get_node("Position2D").global_transform
 	fruit2.transform = get_node("Position2D").global_transform
 	
-	
+func _physics_process(delta):
+	if not get_node("VisibilityNotifier2D").is_on_screen():
+		print("deleted sample fruit")															
+		var lifeCanvas = get_tree().get_nodes_in_group("Life")[0]
+		print(lifeCanvas.name)
+		lifeCanvas.remove_life()
+		if (lifeCanvas.current_life <= 0):
+			lifeCanvas.game_over_panel.visible = true
+		queue_free()
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
