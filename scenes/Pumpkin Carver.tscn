@@ -9,8 +9,8 @@
 rotation = -3.14009
 
 [node name="Tile" type="Sprite" parent="Background"]
-position = Vector2( -545.868, -303.259 )
-scale = Vector2( 8.52769, 4.69806 )
+position = Vector2( -535.287, -312.28 )
+scale = Vector2( 9.63901, 6.16143 )
 texture = ExtResource( 3 )
 
 [node name="LifeUI" parent="." instance=ExtResource( 1 )]
