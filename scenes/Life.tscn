@@ -28,6 +28,7 @@ autostart = true
 script = ExtResource( 2 )
 
 [node name="GameOverPanel" type="Panel" parent="Life Canvas"]
+visible = false
 margin_right = 1022.0
 margin_bottom = 600.0
 
