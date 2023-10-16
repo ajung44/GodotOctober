@@ -11,7 +11,7 @@ height = 54.0
 [sub_resource type="CircleShape2D" id=2]
 radius = 24.0
 
-[node name="SweetPotato" type="RigidBody2D"]
+[node name="SweetPotato" type="RigidBody2D" groups=["Fruit"]]
 script = ExtResource( 2 )
 SlicedFruit = ExtResource( 3 )
 
