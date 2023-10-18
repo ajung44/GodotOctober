@@ -18,7 +18,11 @@ func _on_GameTimer_timeout():
 		var fruits = [fruit1, pumpkin, squash, sweetPotato, carrot, apple, cranberry]
 		var kinds = fruits[randi() % fruits.size()]
 		var fruit = kinds.instance()
-		fruit.position = Vector2(rand_range(100, 990), rand_range(100, 590))
-		fruit.apply_central_impulse(Vector2(rand_range(150, 250) * nums[randi() % nums.size()], 0))
+		fruit.position = Vector2(rand_range(50, 974), 650)
+		if (fruit.position.x < 512):
+			fruit.apply_central_impulse(Vector2(rand_range(0, 800), rand_range(-300, -800)))
+		else:
+			print("Spawned right")
+			fruit.apply_central_impulse(Vector2(rand_range(-800, 0), rand_range(-300, -800)))
 		add_child(fruit)
 		wait_time = rand_range(0,1)
